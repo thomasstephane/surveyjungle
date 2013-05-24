@@ -3,4 +3,7 @@ get '/' do
   erb :index
 end
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> benrob changes
