@@ -1,19 +1,27 @@
 <head>Create your survey</head>
 <body>
   <div>
-    <h3>Survey Name: <input type="text"></h3>
-      <p>Survey Description <textarea type="text">Enter your survey description here...</textarea></p>
+    <form action="/survey" method="post">
+    <h3>Survey Name: <input type="text" name="title"></h3>
+      <p>Survey Description <textarea type="text" name="description">Enter your survey description here...</textarea></p>
+      <input type="submit" value="Submit"
+      </form>
   </div>
 
-  <div>
+  <div class="new_questions">
     <%= #add _question here %>
   </div>
 
   <div>
-    <form>
+  
       <input type="submit" value="Add New Question">
       <input type='submit' value='Submit Survey'>
-    </form>
+    
   </div>
+
 </body>
 
+<script>
+var questions_added = 0
+$('.new_questions').append("<input name='question'"+number +">");
+</script>
