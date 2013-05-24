@@ -6,4 +6,8 @@ class Survey < ActiveRecord::Base
   has_many :choices, through: :questions
 
   validates :title, presence: true
+
+  def nb_participations
+    self.participations.where("invited <> 'invited'").count
+  end
 end

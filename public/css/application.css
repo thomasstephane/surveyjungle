@@ -7,3 +7,12 @@
 th {
   text-align: left;
 }
+.survey_display_choice p,
+.survey_display_choice span {
+  display: inline;
+}
+
+
+.survey_display_choice span {
+  margin-left: 20px
+}
