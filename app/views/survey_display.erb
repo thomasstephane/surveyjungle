@@ -1,0 +1,12 @@
+<div class="container">
+  <% @survey.questions.each_with_index do |question, i| %>
+  <div class="survey_display_question">
+    <h2><%= "#{(i + 1)}: " + question.question.capitalize %></h2>
+    <% question.choices.each_with_index do |choice, j| %>
+    <div class="survey_display_choice">
+      <p><%= "#{(j + 1)}: " + choice.choice.capitalize %></p>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
