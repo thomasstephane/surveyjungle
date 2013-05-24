@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
   has_many :surveys
+  has_many :surveys, through: :participations
   has_many :responses
   has_many :participations
 
-  validates :username, presence: true
-  validates :email, presence: true
+  validates :username, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
 
   include BCrypt
 
