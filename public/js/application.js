@@ -5,10 +5,23 @@ $(document).ready(function(){
 
   var i = $('#addinput p').size() + 1;
 
-  $('#addNew').on('click', function() {
-    $('<p><input id="question" type="text" name="p_new_' + i +'" value="" placeholder="I am New" /><a href="#" id="remNew">Remove</a> </p>').appendTo(addDiv);
+  $('#addQuestion').on('click', function() {
+    $('<p><li><input id="question" type="text" name="question_new_' + i +'" value="" placeholder="Question" /><a href="#" id="remNew">Remove</a> </li><p>').appendTo(addDiv);
     i++;
 
-    
-    });
+  return false;
+
+});
+
+$(document).on("click", "#remNew", function(event){
+event.preventDefault();
+    console.log(this);
+if( i > 2 ) {
+
+$(this).parents('li').remove();
+console.log(this);
+i--;
+}
+return false;
+});
 });

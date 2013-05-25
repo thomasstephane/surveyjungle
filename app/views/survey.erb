@@ -12,14 +12,19 @@
 
 <div class="question">
 
-<!--   <form id="question_form" action='/survey' method='post'> -->
+  <form id="question_form" action='/survey' method='post'>
 
-    <div id="addinput">
-      <p>
-        <input id="question" type="text" name="p_new"  placeholder="Question"><a href="#" id="addNew">Add</a>
-      </p>
+    <div>
+      <ol id="addinput">
+        <span id="question_add">
+          <p><li><input id="question" type="text" name="question_new"  placeholder="Question"><a href="#" id="addQuestion">Add Question</a></li></p>
+        </span>
+        <span id="choice_add"
+          <input id="choice" type="text" name="choice_new" placeholder="Choice"><a href="#" id="addChoice">Add Choice</a>
+        </span>
+      </ol>
     </div>
 
-<!--   </form> -->
+  </form>
   
 </div>
