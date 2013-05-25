@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $('form[name="signin"]').on('submit', function(e) {
     e.preventDefault();
-    console.log(this);
+    console.log($(this).serialize());
     $.ajax({
       type: 'post',
       url: '/signin',
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   $('form[name="signup"]').on('submit', function(e) {
     e.preventDefault();
-    console.log($(this).serialize());
+    console.log(this);
     $.ajax({
       type: 'post',
       url: '/signup',
