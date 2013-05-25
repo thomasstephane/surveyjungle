@@ -12,7 +12,7 @@ gem 'thin'
 
 gem 'activesupport'
 gem 'activerecord'
-
+gem 'sinatra-partial'
 gem 'rake'
 
 gem 'shotgun'
