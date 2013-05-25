@@ -2,14 +2,18 @@
   <% @survey.questions.each_with_index do |question, i| %>
   <div class="survey_ask_question">
     <h2><%= "#{(i + 1)}: " + question.question.capitalize %></h2>
-    <form name="question<%= question.id%>" action="/survey/<%= question.id%>/participation" method="post">
+
+    <div class="survey_ask_choice">
+    <form name="<%= question.id%>" action="/survey/<%= question.id%>/participation" method="post">
       <% question.choices.each_with_index do |choice, j| %>
-      <div class="survey_ask_choice">
         <p><%= "#{(j + 1)}: " + choice.choice.capitalize%></p>
-        <button type="submit" name="choice<%=choice.id%>" value="select">Select</button>
-      </div>
+        <button type="submit" name="<%=choice.id%>" value="select" label="<%=choice.choice%>" >Select</button>
       <% end %>
     </form>
+    <div class="answer">
+    </div>
+    </div>
   </div>
   <% end %>
+  <button type="submit" name="<%=@survey.id%>" value="survey">Complete</button>
 </div>

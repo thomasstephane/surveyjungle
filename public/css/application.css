@@ -16,3 +16,7 @@ th {
 .survey_display_choice span {
   margin-left: 20px
 }
+
+.answer {
+  display: none;
+}
