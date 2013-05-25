@@ -11,4 +11,18 @@ $(document).ready(function() {
     });
     console.log(choices);
   });
+  $('button[value="survey"]').on('click', function(){
+    var context = this;
+    $.each(choices, function(index, choice) {
+      $.ajax({
+        type: 'post',
+        url: ('/response/' + choice)
+      });
+    });
+    debugger
+    $.ajax({
+      type: 'post',
+      url: ('/survey/' + context.name + '/participation')
+    });
+  });
 });
