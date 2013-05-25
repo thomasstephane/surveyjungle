@@ -1,19 +1,54 @@
-<head>Create your survey</head>
-<body>
-  <div>
-    <h3>Survey Name: <input type="text"></h3>
-      <p>Survey Description <textarea type="text">Enter your survey description here...</textarea></p>
-  </div>
 
-  <div>
-    <% erb :_question %>
-  </div>
+<h1>Create your survey</h1>
 
-  <div>
-    <form>
-      <input type="submit" value="Add New Question">
-      <input type='submit' value='Submit Survey'>
-    </form>
-  </div>
-</body>
 
+<div class="survey">
+  <form id="survey_form" action="/survey" method="post">
+    <input type="text" name="title" placeholder="Survey Title"><br><br>
+    <textarea type="text" name="description"></textarea><br>    
+    <input type="submit" value="Create a Survey">    
+  </form>
+</div>
+
+
+
+<div class="question">
+
+  <form id="question_form" action='/survey' method='post'>
+
+    <div class="section">
+      <ol class="addinput">
+
+        <div class="question_section"> 
+        
+        <span class="question_add">
+          <p>
+            <li>
+              <input class="question" type="text" name="question_new"  placeholder="Question">
+              <a href="#" class="addQuestion">
+                Add Question
+              </a>
+            </li>
+          </p>
+        </span>
+
+        <span class="choice_add">
+          <p>
+            <input class="choice" type="text" name="choice_new" placeholder="Choice">
+            <a href="#" class="addChoice">
+              Add Choice
+            </a>
+          </p>
+        </span>
+        </div>
+
+
+
+
+        
+      </ol>
+    </div>
+
+  </form>
+  
+</div>
