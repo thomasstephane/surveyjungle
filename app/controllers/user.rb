@@ -1,8 +1,3 @@
-get '/user' do
-  erb :user
-end
-
-
 post '/signup' do 
   content_type :json
   if User.find_by_username(params[:username])
@@ -17,10 +12,8 @@ post '/signup' do
 end
 
 post '/signin' do 
-  p session
-  p params
+  content_type :json
   @user = User.find_by_username(params[:username])
-  p @user
   if session[:user_id]
     {msg: "logged in already!"}.to_json
   elsif @user
@@ -37,5 +30,5 @@ end
 
 get '/logout' do
   session.clear
-  redirect '/user'
+  redirect '/'
 end

@@ -13,6 +13,7 @@ function blackedDotted(classname) {
 
 $(document).ready(function() {
   var classnames = ['create', 'take', 'visualize', 'share'];
+
   $.each(classnames, function(index, classname) {
     var others = classnames.slice();
     delete others[index];
@@ -23,5 +24,24 @@ $(document).ready(function() {
         $(blackedDotted(subclassname)).addClass(subclassname).removeClass(blacked(subclassname));
       });
     });
+  });
+
+  $('img[name="logo"]').hover(function(){
+    $('#signin').slideDown("slow");
+    $('#signup').slideUp("slow");
+  });
+
+  $('.container').hover(function(){
+    $('#signin').slideUp("slow");
+    $('#signup').slideUp("slow");
+  });
+  $('#signin p').on('click',function(){
+    $('#signup').slideDown("slow");
+    $('#signin').slideUp("slow");
+  });
+
+  $('#signup p').on('click',function(){
+    $('#signin').slideDown("slow");
+    $('#signup').slideUp("slow");
   });
 });
