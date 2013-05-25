@@ -27,3 +27,5 @@ get '/_question' do
 end
 
 
+# <input id="choice" type="text" name="choice4" placeholder="Choice"><br>
+# <input type="submit" value="Add Another Choice">

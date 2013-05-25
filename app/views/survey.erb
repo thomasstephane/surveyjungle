@@ -1,38 +1,25 @@
 <h1>Create your survey</h1>
 
-<div class="">
-  <form action="/survey" method="post">
+<div class="survey">
+  <form id="survey_form" action="/survey" method="post">
     <input type="text" name="title" placeholder="Survey Title"><br><br>
-    <textarea type="text" name="description"></textarea><br>
-    <input type="submit" value="Create a Survey">
+    <textarea type="text" name="description"></textarea><br>    
+    <input type="submit" value="Create a Survey">    
   </form>
 </div>
+
+
 
 <div class="question">
 
-  <form action='/survey' method='post'>
-    <input id="question" type="text" name="question" placeholder="Question"><br>
-    <input id="choice" type="text" name="choice4" placeholder="Choice"><br>
-    <input type="submit" value="Add Another Choice">
-  </form>
-</div>
+<!--   <form id="question_form" action='/survey' method='post'> -->
 
+    <div id="addinput">
+      <p>
+        <input id="question" type="text" name="p_new"  placeholder="Question"><a href="#" id="addNew">Add</a>
+      </p>
+    </div>
 
-
-
-
-// <script>
+<!--   </form> -->
   
-// $(document).ready(function(){
-//   $('form')
-
-//   var addDiv = $('#question');
-//   var i = $('')
-// })
-
-
-
-
-
-
-// </script>
+</div>
