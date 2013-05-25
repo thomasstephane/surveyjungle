@@ -18,7 +18,6 @@ post '/survey/:survey_id/participation' do |survey_id|
   else
     Participation.create(user_id: @user.id, survey_id: @survey.id, invited: "non_invited")
   end
-  redirect '/'
 end
 
 

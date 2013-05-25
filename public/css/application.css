@@ -1,22 +1,203 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+* {
+  font-family: "Open Sans", Helvetica, Arial;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  color: #d3d3d3;
+  text-decoration: none;
+  font-weight: 300px;
 }
-th {
-  text-align: left;
+
+html {
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  background: url('../images/menu.png') repeat top left;
 }
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.container-main {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#menu {
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+#nav {
+  min-width: 100%;
+  width: 100%;
+  min-height: 60px;
+  height: 60px;
+  text-align: center;
+}
+
+#nav p {
+  display: inline;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+#nav img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.create,
+.take,
+.visualize,
+.share,
+.create-black,
+.visualize-black,
+.take-black,
+.share-black {
+  width: 25%;
+  height: 100%;
+  min-width: 25%;
+  min-height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  -webkit-transition: width 0.3s, opacity 0.3s, margin 0.3s, top 0.35s;
+  -moz-transition: width 0.3s, opacity 0.3s, margin 0.3s, top 0.35s;
+  -ms-transition: width 0.3s, opacity 0.3s, margin 0.3s, top 0.35s;
+  -o-transition: width 0.3s, opacity 0.3s, margin 0.3s, top 0.35s;
+  transition: width 0.3s, opacity 0.3s, margin 0.3s, top 0.35s;
+}
+
+.share-black,
+.create-black,
+.visualize-black,
+.take-black {
+  width: 20%;
+  min-width: 20%;
+}
+
+.create-black {
+  background: url('../images/jungle1d.jpg') no-repeat center center;
+}
+
+.take-black {
+  background: url('../images/jungle2d.jpg') no-repeat center center;
+}
+
+.visualize-black {
+  background: url('../images/jungle4d.jpg') no-repeat center center;
+}
+
+.share-black {
+  background: url('../images/jungle3d.jpg') no-repeat center center;
+}
+
+.create p,
+.take p,
+.visualize p,
+.share p,
+.create-black p,
+.visualize-black p,
+.take-black p,
+.share-black p {
+  text-align: center;
+  color: #1c1c1c;
+  font-size: 24px;
+  height: 50%;
+}
+
+.create p,
+.take p,
+.visualize p,
+.share p,
+.create-black p,
+.visualize-black p,
+.take-black p,
+.share-black p {
+  text-align: center;
+}
+.create p {
+  color: #385c10;
+}
+
+.create-black p {
+  color: #1b2d08;
+}
+
+.take p {
+  color: #5e0200;
+}
+
+.take-black p {
+  color: #2e0100;
+}
+
+.visualize p {
+  color: #005247;
+}
+
+.visualize-black p {
+  color: #002823;
+}
+
+.share p {
+  color: #ff3500;
+}
+
+.share-black p {
+  color: #6f0000;
+}
+
+.create {
+  background: url('../images/jungle1.jpg') no-repeat center center;
+}
+
+.take {
+  background: url('../images/jungle2.jpg') no-repeat center center;
+}
+
+.visualize {
+  background: url('../images/jungle4.jpg') no-repeat center center;
+}
+
+.share {
+  background: url('../images/jungle3.jpg') no-repeat center center;
+}
+
 .survey_display_choice p,
-.survey_display_choice span {
+.survey_display_choice span,
+.survey_ask_choice p,
+.survey_ask_choice button {
   display: inline;
 }
 
 
-.survey_display_choice span {
+.survey_display_choice span,
+.survey_ask_choice button  {
   margin-left: 20px
 }
 
 .answer {
   display: none;
+}
+
+input {
+padding: 1px;
+background-color: transparent;
+border: none;
+text-align: center;
 }

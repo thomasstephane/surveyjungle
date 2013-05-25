@@ -4,8 +4,8 @@ $(document).ready(function() {
     e.preventDefault();
     var context = this;
     choices.push($(context).attr('name'));
-    $(context).parent().toggle("slow", function() {
-      var choice = $(context).parent().parent().find('.answer');
+    $(context).parent().parent().toggle("slow", function() {
+      var choice = $(context).parent().parent().parent().find('.answer');
       choice.append($(context).attr('label'));
       choice.toggle("slow");
     });
@@ -19,7 +19,6 @@ $(document).ready(function() {
         url: ('/response/' + choice)
       });
     });
-    debugger
     $.ajax({
       type: 'post',
       url: ('/survey/' + context.name + '/participation')

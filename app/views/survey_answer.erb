@@ -6,8 +6,9 @@
     <div class="survey_ask_choice">
     <form name="<%= question.id%>" action="/survey/<%= question.id%>/participation" method="post">
       <% question.choices.each_with_index do |choice, j| %>
-        <p><%= "#{(j + 1)}: " + choice.choice.capitalize%></p>
+        <div class="choice"><p><%= "#{(j + 1)}: " + choice.choice.capitalize%></p>
         <button type="submit" name="<%=choice.id%>" value="select" label="<%=choice.choice%>" >Select</button>
+        </div>
       <% end %>
     </form>
     <div class="answer">
