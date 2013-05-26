@@ -1,0 +1,13 @@
+<% if @user %>
+
+<div id="logout"><a href="/logout">Logout</a></div>
+
+<% else %>
+  <form action='/signin' name="signin" method='post'>
+    <input type="text" name="username" required placeholder="Username">
+    <input type="password" name="password" required placeholder="Password">
+    <input type="submit" value="Sign in!">
+  </form>
+<p>Signup</p>
+
+<% end %>

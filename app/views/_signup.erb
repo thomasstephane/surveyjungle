@@ -1,0 +1,11 @@
+<% if @user %>
+
+<% else %>
+  <form action='/signup' name="signup" method='post' autocomplete="off">
+    <input type="text" name="username" required placeholder="Username">
+    <input type="password" name="password" required placeholder="Password">
+    <input type="text" name="email" required placeholder="Email">
+    <input type="submit" value="Join Us!">
+  </form>
+<p>Signin</p>
+<% end %>

@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   var addDiv = $('.addinput');
 
@@ -44,5 +43,4 @@ $(document).ready(function(){
 
   });
 });
-
 
