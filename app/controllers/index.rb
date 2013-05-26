@@ -7,7 +7,8 @@ end
 post '/survey' do
   @survey = Survey.create(
     title: params[:title],
-    description: params[:description])
+    description: params[:description],
+    user_id: session[:user_id])
 
   @questions = params[:questions]
   @questions.each do |question|
@@ -19,7 +20,6 @@ post '/survey' do
     end
     @survey.questions << @question
   end
-
 
   redirect '/survey'
 end

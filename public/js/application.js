@@ -1,11 +1,14 @@
 $(document).ready(function(){
+
+
+  $('.survey-fields').delay(800).slideDown('slow');
+  $('.section').delay(1600).slideDown('slow');
   var addDiv = $('.addinput');
 
 
   $('.addQuestion').on('click', function() {
-    $('<div class="question_section"><span class="question_add"><p><li><input class="question" type="text" name="questions[][question]" placeholder="Question" /><a href="#" class="remNew">Remove</a> </li></p></span><span class="choice_add"><p><input class="choice" type="text" name="questions[][choices][]" placeholder="Choice"><a href="#" class="addChoice">Add Choice</a></p></span></div>').appendTo(addDiv);
-    i++;
-    return false;
+    var newQuestion = $('<div class="question_section"><span class="question_add"><p><li><img src="../images/create.jpg"><input class="question" type="text" name="questions[][question]" placeholder="Question" /><a href="#" class="remNew">Remove</a> </li></p></span><span class="choice_add"><p><input class="choice" type="text" name="questions[][choices][]" placeholder="Choice"><a href="#" class="addChoice">Add Choice</a></p></span></div>').hide();
+    newQuestion.appendTo(addDiv).slideDown("slow");
   });
 
   $(document).on("click", ".remNew", function(event){
@@ -17,19 +20,13 @@ $(document).ready(function(){
     $(this).parents('.question_section').remove();
 
     console.log(this);
-
-    return false;
   });
-});
-
-$(document).ready(function(){
   var addChoice = $('.choice_add');
 
 
   $('form').on('click', '.addChoice',function() {
-    $('<p><input class="choice" type="text" name="questions[][choices][]" placeholder="Choice"><a href="#" class="remChoice">Remove</a></p>').appendTo($(this).parents('p'));
-
-    return false;
+    var newChoice = $('<p><input class="choice" type="text" name="questions[][choices][]" placeholder="Choice"><a href="#" class="remChoice">Remove</a></p>').hide();
+    newChoice.appendTo($(this).parents('p')).slideDown("slow");
   });
 
   $(document).on("click", ".remChoice", function(event){
@@ -38,8 +35,6 @@ $(document).ready(function(){
 
     $(this).closest('p').remove();
     console.log(this);
-
-    return false;
 
   });
 });
