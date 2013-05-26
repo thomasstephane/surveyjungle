@@ -49,8 +49,9 @@ $(document).ready(function() {
     console.log("hi");
     $.ajax({
       type: 'get',
-      url: '/survey'
+      url: '/analyze'
     }).done(function(data) {
+      debugger
       $('html').toggle(function() {
         $(this).html();
       }, function() {

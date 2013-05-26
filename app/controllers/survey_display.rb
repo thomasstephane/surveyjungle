@@ -27,7 +27,7 @@ post '/response/:choice_id' do |choice_id|
   Response.create(choice_id: choice_id, question_id: choice.question_id, user_id: @user.id)
 end
 
-get '/survey' do 
+get '/analyze' do 
   @surveys = Survey.all
   erb :analyze
 end
