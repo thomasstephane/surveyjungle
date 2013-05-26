@@ -1,9 +1,13 @@
 <div class="container">
   <div id="analyze">
     <% @surveys.each_with_index do |survey, i| %>
-    <div class="survey">
-      <p><a href="/survey/<%= survey.id %>"><%= survey.title %></a></p>
-    </div>
+    <a href="/survey/<%= survey.id %>">
+      <div class="survey">
+        <h3><%= survey.title %></h3>
+        <img src="../images/analyze.jpg">
+        <p><%= survey.description %></p>
+        </div>
+    </a>
     <% end %>
   </div>
 </div>

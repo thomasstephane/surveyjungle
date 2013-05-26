@@ -27,6 +27,7 @@ end
 
 get '/survey' do
  
+ @user = current_user
 
   erb :survey
 end

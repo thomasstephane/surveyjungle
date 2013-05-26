@@ -4,4 +4,150 @@
   height: 100%;
   width: 100%;
   background: url('../images/jungle4.jpg') no-repeat center center;
+  display: table;
+  color: #002823;
+}
+
+#analyze-results {
+  min-width: 100%;
+  min-height: 90%;
+  height: 90%;
+  width: 100%;
+  background: url('../images/analyze.jpg') repeat-x top left;
+  display: table;
+  color: #002823;
+  padding: 30px;
+}
+
+#analyze a {
+  display: table-cell;
+  min-height: 100%;
+  height: 100%;
+  border-right: 1px solid #002823;
+}
+
+#analyze a:last-child {
+  border-right: none;
+}
+
+.survey {
+  background-color: rgba(0,0,0,0.3);
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 30%;
+}
+
+.survey:hover {
+  background-color: rgba(0,0,0,0);;
+  min-width: 100%;
+  width: 100%;
+}
+
+.survey p,
+.survey h3,
+.survey img {
+  display: block;
+  color: #002823;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.survey:hover > p,
+.survey:hover > h3,
+.survey:hover > img {
+  color: #005247;
+}
+
+.survey img {
+  margin: 15px auto;
+  display: block;
+  color: #002823;
+  text-align: center;
+}
+
+.survey_ask_choice,
+.survey_display_choice {
+  line-height: 20px;
+  margin-left: 60px;
+  clear: both;
+}
+
+.survey_display_choice p,
+.survey_display_choice span,
+.survey_ask_choice p,
+.survey_ask_choice button {
+  display: inline;
+  line-height: 16px;
+  font-size: 14px;
+  float: left;
+}
+
+
+.survey_display_choice span,
+.survey_ask_choice button  {
+  margin-left: 20px;
+  display: inline;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.survey_display_question {
+  line-height: 30px;
+  vertical-align: middle;
+  margin-bottom: 12px;
+  margin-top: 36px;
+  margin-left: 100px;
+}
+
+.survey_display_question div h2,
+.survey_display_question div img {
+  font-size: 16px;
+  display: inline-block;
+  margin: auto;
+  float: left;
+}
+
+.survey_display_question div img {
+  margin-right: 30px;
+  float: left;
+  margin-bottom: 12px;
+}
+
+.answer {
+  display: none;
+}
+
+.progress {
+  margin-left: 36px;
+  display: inline-block;
+  height: 16px;
+  min-height: 16px;
+  width: 200px;
+  min-width: 200px;
+  border: 1px solid #002823;
+}
+
+.score {
+  background: url('../images/analyze.jpg') repeat top left;
+  height: 100%;
+  min-height: 100%;
+}
+
+.progress p{
+  font-size: 11px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom {
+  min-width: 100%;
+  min-height: 10%;
+  height: 10%;
+  width: 100%;
+  background: url('../images/jungle4.jpg') no-repeat center center;
 }

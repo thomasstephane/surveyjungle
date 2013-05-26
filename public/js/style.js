@@ -45,18 +45,19 @@ $(document).ready(function() {
     $('#signup').slideUp("slow");
   });
 
-  $('.visualize').on('click', function(){
-    console.log("hi");
-    $.ajax({
-      type: 'get',
-      url: '/analyze'
-    }).done(function(data) {
-      debugger
-      $('html').toggle(function() {
-        $(this).html();
-      }, function() {
-        $(this).html(data);
-      });
-    });
+  $(dotted(classnames[0])).on('click', function(){
+   $(location).attr('href','/survey');
+  });
+
+  $(dotted(classnames[1])).on('click', function(){
+   $(location).attr('href','/analyze');
+  });
+
+  $(dotted(classnames[2])).on('click', function(){
+   $(location).attr('href','/analyze');
+  });
+
+  $(dotted(classnames[3])).on('click', function(){
+   $(location).attr('href','/share');
   });
 });

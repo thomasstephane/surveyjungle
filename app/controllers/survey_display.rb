@@ -1,11 +1,12 @@
 get '/survey/:survey_id' do |survey_id|
+  @user = current_user
   @survey = Survey.find(survey_id.to_i)
   erb :survey_display
 end
 
 get '/survey/:survey_id/participation' do |survey_id|
   @survey = Survey.find(survey_id.to_i)
-  @user = User.find(session[:user_id])
+  @user = current_user
   erb :survey_answer
 end
 
@@ -28,6 +29,8 @@ post '/response/:choice_id' do |choice_id|
 end
 
 get '/analyze' do 
-  @surveys = Survey.all
+
+  @user = current_user
+  @surveys = Survey.all#where("user_id = ?",session[:user_id])
   erb :analyze
 end
