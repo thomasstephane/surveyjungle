@@ -26,3 +26,8 @@ post '/response/:choice_id' do |choice_id|
   @user = User.find(session[:user_id])
   Response.create(choice_id: choice_id, question_id: choice.question_id, user_id: @user.id)
 end
+
+get '/survey' do 
+  @surveys = Survey.all
+  erb :analyze
+end

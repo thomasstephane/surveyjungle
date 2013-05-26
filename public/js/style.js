@@ -44,4 +44,18 @@ $(document).ready(function() {
     $('#signin').slideDown("slow");
     $('#signup').slideUp("slow");
   });
+
+  $('.visualize').on('click', function(){
+    console.log("hi");
+    $.ajax({
+      type: 'get',
+      url: '/survey'
+    }).done(function(data) {
+      $('html').toggle(function() {
+        $(this).html();
+      }, function() {
+        $(this).html(data);
+      });
+    });
+  });
 });
