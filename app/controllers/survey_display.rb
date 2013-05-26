@@ -31,6 +31,6 @@ end
 get '/analyze' do 
 
   @user = current_user
-  @surveys = Survey.all#where("user_id = ?",session[:user_id])
+  @surveys = Survey.where("user_id = ?",session[:user_id])
   erb :analyze
 end

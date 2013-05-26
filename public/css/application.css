@@ -211,22 +211,6 @@ body {
   background: url('../images/jungle3.jpg') no-repeat center center;
 }
 
-.survey_display_choice p,
-.survey_display_choice span,
-.survey_ask_choice p,
-.survey_ask_choice button {
-  display: inline;
-}
-
-
-.survey_display_choice span,
-.survey_ask_choice button  {
-  margin-left: 20px
-}
-
-.answer {
-  display: none;
-}
 
 input {
   padding: 1px;
