@@ -15,7 +15,9 @@ $(document).ready(function() {
   var classnames = ['create', 'take', 'visualize', 'share'];
 
   $('#welcome-text').delay(800).slideDown(1500);
-  $('.survey_display_question').delay(800).slideDown(801);
+  $('#answer-results').delay(800).slideDown(801);
+  $('.survey_ask_choice').hide();
+  $('.survey_ask_choice').delay(1600).slideDown('slow');
   $('.survey_display_question').delay(800).slideDown(801);
   $('.survey_display_choice').hide();
   $('.survey_display_choice').delay(1600).slideDown('slow');

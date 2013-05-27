@@ -13,7 +13,7 @@
   display: none;
   min-width: 100%;
   width: 100%;
-  display: table;
+  /*display: table;*/
   color: #2e0100;
 }
 .row {
@@ -101,7 +101,6 @@
   width: 100%;
   background: url('../images/jungle2.jpg') no-repeat 50% 70%;
   margin: auto;
-  margin-top: 24px; 
   color: #9d2d15;
   text-align: center;
   font-size: 26px;
@@ -180,6 +179,10 @@
   display: inline-block;
   margin-left: 20%;
   clear: both;
+}
+
+div.survey_ask_question:last-child {
+  margin-bottom: 24px; 
 }
 
 .survey_ask_question div h2,
