@@ -11,9 +11,12 @@ post '/survey/:survey_id/participation' do |survey_id|
   particip = Participation.find_by_user_id_and_survey_id(@user.id, @survey.id)
   if particip
     particip.invited = "responded"
+    particip.save
   else
-    Participation.create(user_id: @user.id, survey_id: @survey.id, invited: "non_invited")
+    puts "create a responded"
+    Participation.create(user_id: @user.id, survey_id: @survey.id, invited: "responded")
   end
+  "#{survey_id}"
 end
 
 get '/survey/:survey_id' do |survey_id|
@@ -43,7 +46,7 @@ end
 get '/answer' do 
 
   @user = current_user
-  @participations = Participation.where("user_id = ? AND invited = ?",@user.id, "responded")
+  @participations = Participation.where("user_id = ? AND invited = ?",@user.id, "invited")
   @surveys = []
   @participations.each do |participation|
     @surveys << Survey.find(participation.survey_id)
