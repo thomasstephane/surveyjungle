@@ -67,7 +67,8 @@
   text-align: center;
 }
 
-#bottom-share {
+#bottom-share,
+#share-survey {
   min-height: 400px;
   height: 20%;
   min-width: 100%;
@@ -85,7 +86,8 @@
   font-size: 26px;
 }
 
-#top-share {
+#top-share,
+#new-share h1 {
   min-width: 100%;
   width: 100%;
   background: url('../images/jungle3.jpg') no-repeat 0% 41.2%;
@@ -97,6 +99,14 @@
   text-align: center;
 }
 
+input#share-survey {
+  background: url('../images/jungle3.jpg') no-repeat 0% 87.5%;
+}
+#new-share h1{
+  background: url('../images/jungle3.jpg') no-repeat 0% 48.5%;
+}
+
+
 #top-share h2 {
   margin: auto;
   color: #6f0000;
@@ -105,4 +115,66 @@
 #top-share p {
   margin: auto;
   color: #6f0000;
+}
+
+
+#new-survey,
+#register {
+  min-height: 100%;
+  height: 100%;
+  min-width: 100%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.new-mail {
+  display: none;
+  text-align: left;
+  min-width: 400px;
+}
+
+a.add-email,
+a.remMail {
+  height: 30px;
+  line-height: 30px;
+}
+
+a.remMail {
+  margin-right: 14px;
+  height: 30px;
+}
+
+input.email-share {
+  display: inline;
+  margin: 0;
+  line-height: 30px;
+}
+.new-mail img{
+  display: inline;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.new-mail:first-child img {
+  margin-right: 7px;
+}
+
+.share-form {
+  text-align: center;
+}
+
+.new-mail {
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.new-mail:first-child {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.new-mail:last-child {
+  text-align: center;
+  margin-bottom: 40px;
 }

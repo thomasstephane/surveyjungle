@@ -22,6 +22,7 @@ $(document).ready(function() {
   $('.survey_display_choice').hide();
   $('.survey_display_choice').delay(1600).slideDown('slow');
   $('.survey-fields').delay(800).slideDown('slow');
+  $('.new-mail').delay(800).slideDown('slow');
   $('.section').delay(1600).slideDown('slow');
 
   $.each(classnames, function(index, classname) {
