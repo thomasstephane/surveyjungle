@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
   has_many :surveys
   has_many :surveys, through: :participations
+  has_many :surveys, through: :invitations
   has_many :participations
+  has_many :invitations
   has_many :responses
 
   validates :username, presence: true, uniqueness: true
