@@ -14,13 +14,13 @@ function blackedDotted(classname) {
 $(document).ready(function() {
   var classnames = ['create', 'take', 'visualize', 'share'];
 
+  $('#welcome-text').delay(800).slideDown(1500);
   $('.survey_display_question').delay(800).slideDown(801);
   $('.survey_display_question').delay(800).slideDown(801);
   $('.survey_display_choice').hide();
   $('.survey_display_choice').delay(1600).slideDown('slow');
   $('.survey-fields').delay(800).slideDown('slow');
   $('.section').delay(1600).slideDown('slow');
-  
 
   $.each(classnames, function(index, classname) {
     var others = classnames.slice();

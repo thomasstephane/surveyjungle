@@ -4,9 +4,41 @@
   display: none;
 }
 
-#welcome-text p{
-  margin: 12px auto;
-  padding: 12px;
+#welcome-text{
+  display: none;
+  margin: 45px auto;
+  text-align: center;
+}
+#welcome-text div{
+  max-width: 600px;
+  width: 600px;
+  margin: auto;
+  text-align: justify;
+  clear: both;
+  display: block;
+  margin-bottom: 45px;
+}
+
+#welcome-text div p{
+  display: inline;
+  font-size: 16px;
+}
+
+#welcome-text div img {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 15px;
+}
+
+#welcome-text div img {
+  margin: 15px auto;
+  color: #002823;
+}
+
+#welcome-text div img.user {
+  margin: 15px auto;
+  padding-left: 265px;
+  float: none;
 }
 
 #new-survey,

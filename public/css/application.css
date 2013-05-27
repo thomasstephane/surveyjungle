@@ -62,11 +62,17 @@ body {
   font-size: 18px;
 }
 
+#nav img:first-child {
+  margin-left: 15px;
+}
+
 #nav img {
   display: inline-block;
   vertical-align: middle;
+}
+
+#nav img:last-child {
   margin-right: 15px;
-  margin-left: 15px;
 }
 
 #signin,
