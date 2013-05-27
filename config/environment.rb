@@ -23,6 +23,9 @@ require 'erb'
 require 'bcrypt'
 require 'pony'
 
+require 'erubis'
+set :erb, :escape_html => true
+
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
