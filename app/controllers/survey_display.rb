@@ -1,13 +1,19 @@
+['/participation/:survey_id', '/survey/:survey_id', '/survey', '/share', '/analyze', '/answer'].each do |path|
+  before path do 
+    redirect '/register' unless session[:user_id]
+  end
+end
 
 get '/participation/:survey_id' do |survey_id|
   @survey = Survey.find(survey_id.to_i)
+  @user = current_user
   @user = current_user
   erb :survey_answer
 end
 
 post '/survey/:survey_id/participation' do |survey_id|
+  @user = current_user
   @survey = Survey.find(survey_id)
-  @user = User.find(session[:user_id])
   particip = Participation.find_by_user_id_and_survey_id(@user.id, @survey.id)
   if particip
     particip.invited = "responded"
@@ -29,7 +35,6 @@ post '/response/:choice_id' do |choice_id|
 end
 
 get '/analyze' do 
-
   @user = current_user
   @surveys = Survey.where("user_id = ?",session[:user_id])
   @participations = Participation.where("user_id = ? AND invited <> ?",@user.id, "invited")
@@ -41,7 +46,6 @@ get '/analyze' do
 end
 
 get '/answer' do 
-
   @user = current_user
   @participations = Participation.where("user_id = ? AND invited = ?",@user.id, "responded")
   @surveys = []

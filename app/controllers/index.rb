@@ -25,8 +25,12 @@ post '/survey' do
 end
 
 get '/survey' do
- 
- @user = current_user
-
+  @user = current_user
   erb :survey
+end
+
+
+get '/register' do
+  @user = current_user
+  erb :register
 end
