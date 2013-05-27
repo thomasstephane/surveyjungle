@@ -12,13 +12,11 @@ class Choice < ActiveRecord::Base
   end
 
   def nb_responses
-    puts "nb responses"
-    p self.responses.count
+    self.responses.count
   end
 
   def nb_participations
-    puts "nb participations"
-    p Question.find(self.question_id).nb_participations
+    Question.find(self.question_id).nb_participations
   end
 
 end

@@ -5,7 +5,7 @@ end
 User.all.each do |user|
   num = 1 + rand(10)
   num.times do |i|
-    Survey.create(title: "Survey#{i + 1}", description: "This is the description of survey number #{i + 1}", user_id: user.id) 
+    Survey.create(title: "Survey#{i + 1} of #{user.id}", description: "This is the description of survey number #{i + 1}", user_id: user.id) 
   end
 end
 
@@ -25,11 +25,13 @@ end
 
 Survey.all.each do |survey|
   User.all.each do |user|
-    invite = ["non_invited","invited", "responded"].sample
-    Participation.create(user_id: user.id, survey_id: survey.id, invited: invite)
-    if invite != "invited"
-      survey.questions.each do |question|
-        Response.create(choice_id: question.choices.sample.id, question_id: question.id, user_id: user.id)
+    invite = [nil,"invited", "responded"].sample
+    if invite 
+      Participation.create(user_id: user.id, survey_id: survey.id, invited: invite)
+      if invite == "responded"
+        survey.questions.each do |question|
+          Response.create(choice_id: question.choices.sample.id, question_id: question.id, user_id: user.id)
+        end
       end
     end
   end
