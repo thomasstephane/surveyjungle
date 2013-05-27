@@ -7,7 +7,6 @@ end
 get '/participation/:survey_id' do |survey_id|
   @survey = Survey.find(survey_id.to_i)
   @user = current_user
-  @user = current_user
   erb :survey_answer
 end
 
