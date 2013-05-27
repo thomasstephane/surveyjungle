@@ -1,0 +1,108 @@
+#share {
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  background: url('../images/jungle3.jpg') no-repeat bottom left;
+  display: table;
+  color: #ff3500;
+  background-color: #fcfefd;
+}
+
+#share-results {
+  display: none;
+  min-width: 100%;
+  width: 100%;
+  display: table;
+  color: #ff3500;
+}
+
+#share a {
+  display: table-cell;
+  border-right: 1px solid #ff3500;
+  border-bottom: 1px solid #ff3500;
+
+}
+
+#share a:last-child {
+  border-right: none;
+}
+
+.survey-share {
+  background-color: rgba(0,0,0,0.3);
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 10%;
+}
+
+.survey-share:hover {
+  background-color: rgba(0,0,0,0);;
+  min-width: 100%;
+  width: 100%;
+}
+
+.survey-share p,
+.survey-share h3,
+.survey-share img {
+  display: block;
+  color: #6f0000;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.survey-share:hover > p,
+.survey-share:hover > h3,
+.survey-share:hover > img {
+  color: #6f0000;
+}
+
+.survey-share img {
+  margin: 15px auto;
+  display: block;
+  color: #ff3500;
+  text-align: center;
+}
+
+#bottom-share {
+  min-height: 400px;
+  height: 20%;
+  min-width: 100%;
+  width: 100%;
+  background: url('../images/jungle3.jpg') no-repeat 0% 83.5%;
+  margin: auto;
+  color: #6f0000;
+  text-align: center;
+  font-size: 26px;
+}
+
+#bottom-share a p {
+  padding-top: 200px;
+  color: #ff3500;
+  font-size: 26px;
+}
+
+#top-share {
+  min-width: 100%;
+  width: 100%;
+  background: url('../images/jungle3.jpg') no-repeat 0% 41.2%;
+  margin: auto;
+  color: #6f0000;
+  line-height: 60px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+#top-share h2 {
+  margin: auto;
+  color: #6f0000;
+}
+
+#top-share p {
+  margin: auto;
+  color: #6f0000;
+}

@@ -1,0 +1,19 @@
+<div class="container">
+  <div id="share">
+    <% @surveys.each_with_index do |survey, i| %>
+    <% if i % 8 == 0 %>
+    <div class="row">
+      <% end %>
+    <a href="/share/<%= survey.id %>">
+      <div class="survey-share">
+        <h3><%= survey.title %></h3>
+        <img src="../images/share.jpg">
+        <p><%= survey.description %></p>
+        </div>
+    </a>
+    <% if i % 8 == 7 %>
+    </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
