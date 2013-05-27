@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
   });
 
-  $('img[name="logo"]').hover(function(){
+  $('img[name="user"]').hover(function(){
     $('#signin').slideDown("slow");
     $('#signup').slideUp("slow");
   });
@@ -50,7 +50,7 @@ $(document).ready(function() {
   });
 
   $(dotted(classnames[1])).on('click', function(){
-   $(location).attr('href','/analyze');
+   $(location).attr('href','/answer');
   });
 
   $(dotted(classnames[2])).on('click', function(){
@@ -60,4 +60,5 @@ $(document).ready(function() {
   $(dotted(classnames[3])).on('click', function(){
    $(location).attr('href','/share');
   });
+
 });

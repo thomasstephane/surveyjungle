@@ -1,20 +1,28 @@
 <div class="container">
+  <div id="top-analyze">
+    <h2><%= @survey.title.capitalize %></h2>
+    <p><%= @survey.description.capitalize %></p>
+  </div>
   <div id="analyze-results">
-  <% @survey.questions.each_with_index do |question, i| %>
-  <div class="survey_display_question">
-    <div><img src="../images/analyze.jpg">
-    <h2><%= question.question.capitalize %></h2>
-    </div>
-    <% question.choices.each_with_index do |choice, j| %>
-    <div class="survey_display_choice">
-      <p><%= choice.choice.capitalize%></p><div class="progress"><p><%=choice.score%> %</p><div class="score" style="width: <%=choice.score%>%"></div></div>
+    <% @survey.questions.each_with_index do |question, i| %>
+    <div class="survey_display_question">
+      <div><img src="../images/analyze.jpg">
+        <h2><%= question.question.capitalize %></h2>
+      </div>
+      <% question.choices.each_with_index do |choice, j| %>
+      <div class="survey_display_choice">
+        <div class="progress-analyze"><p><%=choice.score%> %</p>
+          <div class="score-analyze" style="width: <%=choice.score%>%">
+          </div>
+        </div>
+        <p><%= choice.choice.capitalize%></p>
+      </div>
+      <% end %>
     </div>
     <% end %>
   </div>
-  <% end %>
-  </div>
 
-  <div class="bottom">
+  <div id="bottom-analyze">
     <a href="/analyze"><p>Analyze</p></a>
   </div>
 </div>

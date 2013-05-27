@@ -3,27 +3,25 @@
   min-height: 100%;
   height: 100%;
   width: 100%;
-  background: url('../images/jungle4.jpg') no-repeat bottom left;
+  background: url('../images/jungle4.jpg') no-repeat bottom right;
   display: table;
   color: #002823;
+  background-color: #fcfefd;
 }
 
 #analyze-results {
+  display: none;
   min-width: 100%;
-  min-height: 90%;
-  height: 90%;
   width: 100%;
-  background: url('../images/analyze.jpg') repeat-x top left;
   display: table;
   color: #002823;
-  padding: 30px;
 }
 
 #analyze a {
   display: table-cell;
-  min-height: 100%;
-  height: 100%;
   border-right: 1px solid #002823;
+  border-bottom: 1px solid #002823;
+
 }
 
 #analyze a:last-child {
@@ -34,16 +32,16 @@
   background-color: rgba(0,0,0,0.3);
   min-width: 100%;
   min-height: 100%;
-  height: 100%;
   width: 100%;
   margin: auto auto;
   display: inline-block;
   vertical-align: middle;
-  padding-top: 50%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 .survey:hover {
-  background-color: rgba(0,0,0,0);;
+  background-color: rgba(0,0,0,0);
   min-width: 100%;
   width: 100%;
 }
@@ -70,7 +68,6 @@
   text-align: center;
 }
 
-.survey_ask_choice,
 .survey_display_choice {
   line-height: 20px;
   margin-left: 60px;
@@ -78,9 +75,7 @@
 }
 
 .survey_display_choice p,
-.survey_display_choice span,
-.survey_ask_choice p,
-.survey_ask_choice button {
+.survey_display_choice span {
   display: inline;
   line-height: 16px;
   font-size: 14px;
@@ -88,8 +83,7 @@
 }
 
 
-.survey_display_choice span,
-.survey_ask_choice button  {
+.survey_display_choice span {
   margin-left: 20px;
   display: inline;
   line-height: 16px;
@@ -97,11 +91,12 @@
 }
 
 .survey_display_question {
+  display: none;
   line-height: 30px;
   vertical-align: middle;
   margin-bottom: 12px;
   margin-top: 36px;
-  margin-left: 100px;
+  margin-left: 20%;
 }
 
 .survey_display_question div h2,
@@ -118,53 +113,69 @@
   margin-bottom: 12px;
 }
 
-.answer {
-  display: none;
+.survey_display_question:last-child {
+  margin-bottom: 60px; 
 }
 
-.progress {
-  margin-left: 36px;
+.progress-analyze {
+  margin-right: 36px;
   display: inline-block;
   height: 16px;
   min-height: 16px;
   width: 200px;
   min-width: 200px;
   border: 1px solid #002823;
+  float: left;
 }
 
-.score {
+.score-analyze {
   background: url('../images/analyze.jpg') repeat top left;
   height: 100%;
   min-height: 100%;
 }
 
-.progress p{
+.progress-analyze p{
   font-size: 11px;
   width: 100%;
   text-align: center;
 }
 
-.bottom {
+#bottom-analyze {
+  min-height: 400px;
+  height: 20%;
   min-width: 100%;
-  min-height: 10%;
-  height: 10%;
   width: 100%;
-  background: url('../images/jungle4.jpg') no-repeat center center;
-}
-
-.bottom a {
-  min-width: 100%;
-  min-height: 100%;
-  height: 100%;
-  width: 100%;
-}
-
-.bottom a p {
-  min-width: 100%;
-  min-height: 100%;
-  height: 100%;
-  width: 100%;
+  background: url('../images/jungle4.jpg') no-repeat 100% 83.5%;
+  margin: auto;
+  color: #1b2d08;
   text-align: center;
+  font-size: 26px;
+}
+
+#bottom-analyze a p {
+  padding-top: 200px;
   color: #002823;
-  font-size: 20px;
+  font-size: 26px;
+}
+
+#top-analyze {
+  min-width: 100%;
+  width: 100%;
+  background: url('../images/jungle4.jpg') no-repeat 100% 41.2%;
+  margin: auto;
+  color: #1b2d08;
+  line-height: 60px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+#top-analyze h2 {
+  margin: auto;
+  color: #1b2d08;
+}
+
+#top-analyze p {
+  margin: auto;
+  color: #1b2d08;
 }
