@@ -5,7 +5,8 @@ post '/signup' do
   elsif User.find_by_email(params[:email])
     {msg: "Email already taken"}.to_json
   else
-    @user = User.create(username: params[:username], email: params[:email], password: session[:password])
+    @user = User.create(username: params[:username], email: params[:email], password: params[:password])
+    Invitation.add_participations(@user)
     session[:user_id] = @user.id
     {msg: "Welcome in!"}.to_json
   end

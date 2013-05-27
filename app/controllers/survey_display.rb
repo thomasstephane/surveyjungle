@@ -1,4 +1,4 @@
-['/participation/:survey_id', '/survey/:survey_id', '/survey', '/share', '/analyze', '/answer'].each do |path|
+['/participation/:survey_id', '/survey/:survey_id', '/survey', '/share/:survey_id', '/share', '/analyze', '/answer'].each do |path|
   before path do 
     redirect '/register' unless session[:user_id]
   end
@@ -40,7 +40,7 @@ end
 get '/analyze' do 
   @user = current_user
   @surveys = Survey.where("user_id = ?",session[:user_id])
-  @participations = Participation.where("user_id = ? AND invited <> ?",@user.id, "invited")
+  @participations = Participation.where("user_id = ? AND invited = ?",@user.id, "responded")
   @participations.each do |participation|
     @surveys << Survey.find(participation.survey_id)
   end

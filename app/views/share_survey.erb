@@ -1,0 +1,18 @@
+<div class="container">
+  <div id="new-share">
+    <h1>Share your survey</h1>
+    <div class="share-form">
+      <form id="share_form" action="/share/<%= @survey.id %>" method='post'>
+        <div class="section-share">
+          <div class="new-mail">
+            <img src="../images/share.jpg">
+            <input class="email-share" type="text" name="survey[emails][]"  placeholder="Email">
+            <a href="#" class="add-email">
+              Add Email
+            </a>
+          </div>
+        </div>
+        <input type="submit" value="Share" id="share-survey">
+      </form>
+    </div>
+  </div>
