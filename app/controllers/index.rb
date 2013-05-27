@@ -21,7 +21,7 @@ post '/survey' do
     @survey.questions << @question
   end
 
-  redirect '/survey'
+  redirect "/share/#{@survey.id}"
 end
 
 get '/survey' do

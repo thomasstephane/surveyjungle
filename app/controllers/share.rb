@@ -40,6 +40,6 @@ def send_mail(email, user, survey)
     },
     :from => user.email,
     :subject => "Would you like to answer the survey: #{survey.title}",
-    :body => "Hello!\n Check in at Survey Jungle to complete this survey: #{survey.title}.\n\nMore about this survey:\n#{survey.description}. \n\n\nCheck out http\:\/\/surveyjungle.herokuapp.com"
+    :body => "Hello!\n Check in at Survey Jungle to complete this survey: #{survey.title}.\n\nMore about this survey:\n#{survey.description}. \n\n\nSee you on http\:\/\/surveyjungle.herokuapp.com\n\n#{user.username}"
   })
 end

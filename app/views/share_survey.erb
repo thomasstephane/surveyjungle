@@ -1,6 +1,6 @@
 <div class="container">
   <div id="new-share">
-    <h1>Share your survey</h1>
+    <h1>Share : <%= @survey.title %></h1>
     <div class="share-form">
       <form id="share_form" action="/share/<%= @survey.id %>" method='post'>
         <div class="section-share">
