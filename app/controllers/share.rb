@@ -1,6 +1,6 @@
 get '/share' do 
   @user = current_user
-  @surveys = Survey.where("user_id = ?",session[:user_id])
+  @surveys = Survey.where("user_id = ? OR open = ?",session[:user_id], true)
   erb :share
 end
 

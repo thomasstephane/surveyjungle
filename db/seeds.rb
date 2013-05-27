@@ -5,7 +5,8 @@ end
 User.all.each do |user|
   num = 1 + rand(10)
   num.times do |i|
-    Survey.create(title: "Survey#{i + 1} of #{user.id}", description: "This is the description of survey number #{i + 1}", user_id: user.id) 
+    open = [true, false].sample
+    Survey.create(title: "Survey#{i + 1} of #{user.id}", description: "This is the description of survey number #{i + 1}", user_id: user.id, open: open) 
   end
 end
 

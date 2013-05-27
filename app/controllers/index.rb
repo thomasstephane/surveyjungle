@@ -5,10 +5,12 @@ end
 
 
 post '/survey' do
+  open = params[:open] == "true"
+
   @survey = Survey.create(
     title: params[:title],
     description: params[:description],
-    user_id: session[:user_id])
+    user_id: session[:user_id], open: open)
 
   @questions = params[:questions]
   @questions.each do |question|

@@ -38,7 +38,7 @@ end
 
 get '/analyze' do 
   @user = current_user
-  @surveys = Survey.where("user_id = ?",session[:user_id])
+  @surveys = Survey.where("user_id = ? OR open = ?",session[:user_id], true)
   @participations = Participation.where("user_id = ? AND invited = ?",@user.id, "responded")
   @participations.each do |participation|
     @surveys << Survey.find(participation.survey_id)
@@ -50,7 +50,7 @@ end
 get '/answer' do 
   @user = current_user
   @participations = Participation.where("user_id = ? AND invited = ?",@user.id, "invited")
-  @surveys = []
+  @surveys = Survey.where("open = ?", true)
   @participations.each do |participation|
     @surveys << Survey.find(participation.survey_id)
   end
