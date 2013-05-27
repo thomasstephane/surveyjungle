@@ -21,6 +21,7 @@ require 'sinatra/partial'
 
 require 'erb'
 require 'bcrypt'
+require 'pony'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -33,3 +34,6 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+gmail_config = YAML.load(File.read(APP_ROOT.join("config", "application.yml")))
+gmail_config.each {|k, v| ENV[k] = v}
