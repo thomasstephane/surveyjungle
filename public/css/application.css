@@ -113,11 +113,9 @@ body {
   position: relative;
   float: right;
   margin-right: 24px;
-  line-height: 40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  line-height: 24px;
+  padding: 3px 10px;
+  margin: 16px 12px;
   border: 1px dotted #3f3f3f;
   cursor: pointer;
 }
@@ -247,6 +245,12 @@ body {
   background: url('../images/jungle3.jpg') no-repeat center center;
 }
 
+input[value="Sign in!"],
+input[value="Join Us!"] {  
+  line-height: 20px;
+  padding: 3px 15px;
+  margin-top: 0px;
+}
 
 input {
   padding: 1px;
