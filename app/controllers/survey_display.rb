@@ -5,9 +5,14 @@
 end
 
 get '/participation/:survey_id' do |survey_id|
-  @survey = Survey.find(survey_id.to_i)
   @user = current_user
-  erb :survey_answer
+  @survey = Survey.find(survey_id.to_i)
+  particip = Participation.find_by_user_id_and_survey_id(@user.id, @survey.id)
+  if particip
+    erb :survey_display
+  else
+    erb :survey_answer
+  end
 end
 
 post '/survey/:survey_id/participation' do |survey_id|
@@ -49,11 +54,23 @@ end
 
 get '/answer' do 
   @user = current_user
-  @participations = Participation.where("user_id = ? AND invited = ?",@user.id, "invited")
+  puts " participation -----------------------"
+  p @participations = Participation.where("user_id = ? AND invited = ?",@user.id, "invited")
+  puts "done participation -----------------------"
+  p @already_done = Participation.where("user_id = ? AND invited = ?",@user.id, "responded")
+  @survey_done = []
+  if @already_done
+    @already_done.each do |participation|
+      @survey_done << Survey.find(participation.survey_id)
+    end
+  end
   @surveys = Survey.where("open = ?", true)
   @participations.each do |participation|
     @surveys << Survey.find(participation.survey_id)
   end
-  @surveys.uniq!
+  puts " final -----------------------"
+  p @surveys
+  puts " final -----------------------"
+  p @surveys = @surveys.uniq - @survey_done
   erb :answer
 end
