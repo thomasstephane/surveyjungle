@@ -12,7 +12,7 @@
       <% question.choices.each_with_index do |choice, j| %>
       <div class="survey_display_choice">
         <div class="progress-analyze"><p><%=choice.score%> %</p>
-          <div class="score-analyze" style="width: <%=choice.score%>%">
+          <div class="score-analyze" style="width: <%=[choice.score, 100].min %>%">
           </div>
         </div>
         <p><%= choice.choice.capitalize%></p>
