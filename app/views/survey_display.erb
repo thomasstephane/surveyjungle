@@ -11,8 +11,8 @@
       </div>
       <% question.choices.each_with_index do |choice, j| %>
       <div class="survey_display_choice">
-        <div class="progress-analyze"><p><%=[choice.score, 100].min%> %</p>
-          <div class="score-analyze" style="width: <%=[choice.score, 100].min %>%">
+        <div class="progress-analyze"><p><%=choice.score ? "#{[choice.score, 100].min} %": "-" %></p>
+          <div class="score-analyze" style="width: <%=choice.score ? [choice.score, 100].min : 0 %>%">
           </div>
         </div>
         <p><%= choice.choice.capitalize%></p>
