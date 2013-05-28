@@ -167,3 +167,35 @@ a.remChoice {
   margin-right: 43px;
   margin-left: 2px;
 }
+
+.survey-fields p,
+.survey-fields input[type="checkbox"] {
+  display: inline;
+  line-height: 40px;
+  margin-right: 38px;
+}
+
+.survey-fields input[type="checkbox"]  {
+    -webkit-appearance: none;
+    border: 1px solid #4db017;
+    position: relative;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 14px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+}
+
+.survey-fields input[type="checkbox"]:checked:after {
+    content: '\295';
+    font-size: 28px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    color: #4db017;
+    background-color: #4db017;
+}
