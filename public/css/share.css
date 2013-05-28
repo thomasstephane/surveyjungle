@@ -101,6 +101,8 @@
 
 input#share-survey {
   background: url('../images/jungle3.jpg') no-repeat 0% 87.5%;
+  cursor: pointer;
+  border: none;
 }
 #new-share h1{
   background: url('../images/jungle3.jpg') no-repeat 0% 48.5%;
@@ -135,8 +137,14 @@ input#share-survey {
 
 a.add-email,
 a.remMail {
+  padding-top: 5px;
+  padding-bottom: 5px;
   height: 30px;
   line-height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px dotted #3f3f3f;
+  cursor: pointer;
 }
 
 a.remMail {
@@ -148,11 +156,21 @@ input.email-share {
   display: inline;
   margin: 0;
   line-height: 30px;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 4px;
+}
+
+.new-mail:first-child input.email-share {
+margin-right: 0;
 }
 .new-mail img{
   display: inline;
-  margin-right: 15px;
+  margin-right: 11px;
   vertical-align: middle;
+  border: 1px solid #ff4900;
+  margin-bottom: 1px;
 }
 
 .new-mail:first-child img {
@@ -167,6 +185,8 @@ input.email-share {
   text-align: center;
   margin: auto;
   vertical-align: middle;
+  margin-top: 5px; 
+  margin-bottom: 5px; 
 }
 
 .new-mail:first-child {

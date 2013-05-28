@@ -151,6 +151,7 @@
   color: #1b2d08;
   text-align: center;
   font-size: 26px;
+  cursor: pointer;
 }
 
 #bottom-analyze a p {

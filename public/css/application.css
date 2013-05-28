@@ -8,6 +8,22 @@
   font-weight: 300px;
 }
 
+::-webkit-input-placeholder {
+   color: #3f3f3f;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #3f3f3f;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #3f3f3f;  
+}
+
+:-ms-input-placeholder {  
+   color: #3f3f3f;  
+}
+
 html {
   min-width: 100%;
   min-height: 100%;
@@ -97,6 +113,13 @@ body {
   position: relative;
   float: right;
   margin-right: 24px;
+  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px dotted #3f3f3f;
+  cursor: pointer;
 }
 
 #signin span,
@@ -230,4 +253,6 @@ input {
   background-color: transparent;
   border: none;
   text-align: center;
+  border: 1px dotted #3f3f3f;
+  cursor: pointer;
 }
